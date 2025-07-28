@@ -27,3 +27,12 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
 }
 
 export default Button;
+
+"use client";
+
+import { ButtonProps } from "@/interface";
+import React from "react";
+
+const Button: React.FC<ButtonProps> = ({
+  action,
+
