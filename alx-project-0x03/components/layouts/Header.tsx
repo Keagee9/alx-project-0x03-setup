@@ -1,3 +1,4 @@
+import { LayoutProps }
 import Link from "next/link";
 import Button from "../common/Button";
 
