@@ -1,15 +1,7 @@
 import Button from "@/components/common/Button";
-import { PageRouteProps } from "@/interface";
-import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter()
-
-  // Imeperative routing with useRouter
-  const routeToNextPage  = ({ pageRoute }: PageRouteProps) => {
-    router.push(pageRoute, undefined, { shallow: false})
-  }
-
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center text-center">
       {/* Welcome Message */}
@@ -23,9 +15,15 @@ export default function Home() {
 
       {/* Navigation Options */}
       <div className="flex gap-6">
-        <Button action={() => routeToNextPage({ pageRoute: '/generate-text-ai' })} buttonLabel="Generate Text" buttonBackgroundColor="blue" />
-        <Button action={() => routeToNextPage({ pageRoute: '/text-to-image'})} buttonLabel="Text to Image" buttonBackgroundColor="green" />
-        <Button action={() => routeToNextPage({ pageRoute: '/counter-app'})} buttonLabel="Contact us" buttonBackgroundColor="orange" />
+        <Link href="/generate-text-ai">
+          <Button buttonLabel="Generate Text" buttonBackgroundColor="blue" />
+        </Link>
+        <Link href="/text-to-image">
+          <Button buttonLabel="Text to Image" buttonBackgroundColor="green" />
+        </Link>
+        <Link href="/counter-app">
+          <Button buttonLabel="Contact us" buttonBackgroundColor="orange" />
+        </Link>
       </div>
     </div>
   );
