@@ -8,7 +8,7 @@ export default function Home() {
   const routeToNextPage = (pageRoute: string) => {
     router.push(pageRoute);
   };
-
+<h1> Welcome to Splash App </h1>
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center text-center">
       <h1> Welcome to Splash App </h1>
