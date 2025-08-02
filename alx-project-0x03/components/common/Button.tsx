@@ -1,4 +1,5 @@
 import type { ButtonProps } from "@/interface";
+import { ButtonProps }
 
 const Button: React.FC<ButtonProps> = ({
   action,
